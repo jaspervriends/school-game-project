@@ -1,0 +1,82 @@
+body {
+    background-image: url('../images/water.jpg');
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow:hidden;
+    margin:0px; padding:0px;
+}
+
+body * {
+    position: absolute;
+    display: block;
+    margin:0px; padding:0px;
+    box-sizing: border-box;
+}
+
+fish {
+    background-image: url(../images/fish.png);
+    width:130px; height: 110px;
+    
+    /* kleur variatie met css */
+    -webkit-filter: hue-rotate(90deg);
+    filter: hue-rotate(90deg);
+    
+    /* animatie met css */
+    animation: fishanimation 4s ease-in-out infinite alternate;
+
+}
+
+fish.yellow {
+    -webkit-filter: hue-rotate(230deg);
+    filter: hue-rotate(230deg);
+}
+
+fish.orange {
+    -webkit-filter: hue-rotate(180deg);
+    filter: hue-rotate(180deg);
+}
+
+fish.green {
+    -webkit-filter: hue-rotate(290deg);
+    filter: hue-rotate(290deg);
+}
+
+.dead {
+    background-image: url(../images/bones.png);
+    animation: none;
+}
+
+bubble {
+    background-image: url(../images/bubble.png);
+    width:55px; height: 55px;
+    left:50vw;
+    animation: bubbleup 6s linear infinite;
+}
+
+background {
+    background-image: url(../images/water.jpg);
+    width:100%; height: 100%;
+    background-size: cover;
+}
+
+@keyframes fishanimation {
+  0% {
+    transform: translateY(20px);
+  }
+  
+  100% {
+    transform: translateY(80px);
+  }
+}
+
+@keyframes bubbleup {
+  0% {
+    transform: translateY(100vh);
+  }
+  
+  100% {
+    transform: translateY(0vh);
+  }
+}
